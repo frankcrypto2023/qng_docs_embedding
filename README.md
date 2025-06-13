@@ -40,13 +40,14 @@ QDRANT_API_KEY=your_qdrant_api_key
 
 1. Start the application:
 ```bash
-uvicorn app:app --reload
+python main.py
 ```
 
 2. Open your browser and navigate to `http://localhost:8000`
 
 3. Enter your query in the search box and click "Search"
 
+![image](./qa.png)
 ## Project Structure
 
 - `app.py`: Main FastAPI application
