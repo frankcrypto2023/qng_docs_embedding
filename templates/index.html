@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Qwen3 Document Query</title>
+</head>
+<body>
+    <h1>Qwen3 Document Query System</h1>
+    <form method="post" action="/query">
+        <input type="text" name="user_query" placeholder="Please enter your question" size="60">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+    <h2>🔍 Search Results:</h2>
+    <ol>
+        {% for item in results %}
+        <li style="margin-bottom: 1em;">
+            <div><strong>Result {{ item.index }}</strong> (similarity: {{ item.score }})</div>
+            <pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; white-space: pre-wrap;">{{ item.snippet }}</pre>
+        </li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+</body>
+</html>
