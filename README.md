@@ -29,13 +29,6 @@ cd qng_docs_embedding
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables:
-Create a `.env` file in the project root with the following variables:
-```
-QDRANT_URL=your_qdrant_url
-QDRANT_API_KEY=your_qdrant_api_key
-```
-
 ## Usage
 
 1. Start the application:
